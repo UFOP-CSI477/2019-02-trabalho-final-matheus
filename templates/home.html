@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home_styles.css'%}">
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div id = "home-content" >
+                {% if request.user.is_authenticated %}
+                    Olá, {{request.user.username}}
+                {% endif %}
+                <h1>PollMe - Inicio</h1>
+                <h3>Sua voz importa!</h3>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

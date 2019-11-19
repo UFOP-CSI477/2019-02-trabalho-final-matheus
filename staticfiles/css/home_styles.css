@@ -1,0 +1,25 @@
+h1,h3 {
+    color: black;
+}
+
+body{
+    background-image: url('../img/photo-1540910419892-4a36d2c3266c.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+    width: auto;
+    height: auto;
+}
+
+#home-content{
+
+    text-align: center;
+ 
+
+}
+
+@media only screen and (max-width: 1028px) {
+    body {
+        background-image: none !important;
+    }
+  }

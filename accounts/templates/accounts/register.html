@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if messages %}
+<div class="container">
+    <div class="row">
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <div class="col-sm-6 offset-sm-3">
+            <p>Já possui uma conta? <a href="{% url 'accounts:login' %}">Entre aqui!</a></p>
+            <form action="" method="post">
+                {% csrf_token %}
+                {% for field in form%}
+                <div class="form-group">
+                    {{ field.errors }}
+                    {{ field.label_tag }}
+                    {{ field }}
+                </div>
+                {% endfor %}
+                <input type="submit" value="Enviar" class='btn btn-primary'>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

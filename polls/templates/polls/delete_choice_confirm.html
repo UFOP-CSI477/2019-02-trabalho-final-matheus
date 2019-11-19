@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Você realmente deseja deletar a opção?</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <div style="text-align: center">
+        <input type="submit" class="btn btn-danger" value="Sim" class="far fa-trash-alt"></i>
+        <a href="{%url 'polls:edit_choice' choice.id %}" class="btn btn-danger">Não</a>
+    </div>
+</form>
+
+
+
+{% endblock %}
