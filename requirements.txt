@@ -23,7 +23,7 @@ django-cors-headers==2.4.0
 django-filter==2.1.0
 django-globals==0.3.2
 django-storages==1.7.1
-djangorestframework==3.9.4
+djangorestframework==3.11.2
 djangorestframework-simplejwt==3.3
 docutils==0.14
 docx2txt==0.6
